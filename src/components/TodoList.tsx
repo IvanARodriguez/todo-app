@@ -18,7 +18,7 @@ export const TodoList = ({ todos, setTodos }: Props) => {
             todo={task}
             todos={todos}
             setTodos={setTodos}
-          />
+          /       >
         ))}
       </div>
       <div className='todos remove'>

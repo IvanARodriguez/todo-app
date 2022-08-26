@@ -55,7 +55,9 @@
     place-items: start;
     place-content: center;
     gap: 1em;
+    padding: .5rem .7rem
 }
+
 .todos{
     width: inherit;
     margin-top: 2em;
@@ -63,20 +65,38 @@
     padding: 2em;
     max-width: 600px;
     border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 
 }
 
 .todos_heading{
-    font-size: 1.5vw;
-    display: block;
-    background-color: rgba(254, 254, 254, 0.896);
-    color: rgb(47, 47, 47);
-    padding: 1rem 2rem;
-    border-radius: .3rem;
-    margin-bottom: 2rem;
+  font-size: 1.3rem;
+  display: block;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px dashed rgba(255, 255, 255, 0.315);
 }
 
 .todos_heading.progress{
-    background-color: teal;
-    color: white;
+  color: rgb(117, 214, 111);
+}
+
+.todos_single{
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(223, 212, 187);
+  color: black;
+  padding: 1.5rem;
+  border-radius: .3rem;
+}
+
+.todos_single--text:focus{
+  outline: none;
+}
+
+.icon{
+  margin-left: .8rem;
 }
