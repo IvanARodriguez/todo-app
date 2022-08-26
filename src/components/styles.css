@@ -1,6 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 .input {
     display: flex;
     width: 90%;
+    max-width: 700px;
     position: relative;
     align-items: center;
 }
@@ -9,7 +14,7 @@
     width: 100%;
     border-radius: 50px;
     padding: 20px 30px;
-    font-size: 25px;
+    font-size: 2.5vw;
     border: none;
     transition: 0.2s;
     box-shadow: inset 0 0 5px black;
@@ -42,4 +47,36 @@
 .input_submit:active {
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    place-items: start;
+    place-content: center;
+    gap: 1em;
+}
+.todos{
+    width: inherit;
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.156);
+    padding: 2em;
+    max-width: 600px;
+    border-radius: .3rem;
+
+}
+
+.todos_heading{
+    font-size: 1.5vw;
+    display: block;
+    background-color: rgba(254, 254, 254, 0.896);
+    color: rgb(47, 47, 47);
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    margin-bottom: 2rem;
+}
+
+.todos_heading.progress{
+    background-color: teal;
+    color: white;
 }

@@ -1,16 +1,29 @@
 import React from 'react'
 import { Todo } from '../model'
-import './style.css'
+import { SingleTodo } from './SingleTodo'
+import './styles.css'
 
-interface Props{
-    todos:Todo[]
-    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+interface Props {
+  todos: Todo[]
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-export const TodoList: React.FC<Props> = ({todos, setTodos} : Props) => {
+export const TodoList = ({ todos, setTodos }: Props) => {
   return (
-    <div className="todos">
-
+    <div className='container'>
+      <div className='todos'>
+        <span className='todos_heading'>Active</span>
+        {todos.map(task => (
+          <SingleTodo
+            todo={task}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
+      </div>
+      <div className='todos remove'>
+        <span className='todos_heading progress'>In Progress</span>
+      </div>
     </div>
   )
 }
