@@ -18,11 +18,18 @@ export const TodoList = ({ todos, setTodos }: Props) => {
             todo={task}
             todos={todos}
             setTodos={setTodos}
-          /       >
+          />
         ))}
       </div>
       <div className='todos remove'>
-        <span className='todos_heading progress'>In Progress</span>
+        <span className='todos_heading'>Completed Task</span>
+        {todos.map(task => (
+          <SingleTodo
+            todo={task}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
       </div>
     </div>
   )

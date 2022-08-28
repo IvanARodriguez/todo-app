@@ -52,7 +52,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    place-items: start;
+    place-items: flex-start;
     place-content: center;
     gap: 1em;
     padding: .5rem .7rem
@@ -68,7 +68,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-
 }
 
 .todos_heading{
@@ -85,18 +84,40 @@
 
 .todos_single{
   font-size: 1.2rem;
+  width: inherit;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between ;
   background-color: rgb(223, 212, 187);
   color: black;
   padding: 1.5rem;
   border-radius: .3rem;
 }
 
+.edit_input{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.done_task{
+  opacity: 50%;
+}
+
 .todos_single--text:focus{
   outline: none;
 }
 
+.iconset{
+  width: fit-content;
+  display: flex;
+}
+
 .icon{
   margin-left: .8rem;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.icon:hover{
+  color: #388ae2;
 }
