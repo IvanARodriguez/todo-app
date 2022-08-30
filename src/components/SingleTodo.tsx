@@ -40,6 +40,7 @@ export const SingleTodo = ({ index, todo, todos, setTodos }: Props) => {
     )
   }
 
+  console.log(todo)
   return (
     <Draggable
       draggableId={todo.id.toString()}

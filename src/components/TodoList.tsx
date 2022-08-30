@@ -26,7 +26,7 @@ export const TodoList = ({
             ref={provided.innerRef}
             {...provided.droppableProps}>
             <span className='todos_heading'>Active</span>
-            {todos.map((task, index) => (
+            {todos?.map((task, index) => (
               <SingleTodo
                 index={index}
                 todo={task}
@@ -46,7 +46,7 @@ export const TodoList = ({
             ref={provided.innerRef}
             {...provided.droppableProps}>
             <span className='todos_heading'>Completed Task</span>
-            {completedTask.map((task, index) => (
+            {completedTask?.map((task, index) => (
               <SingleTodo
                 index={index}
                 todo={task}
